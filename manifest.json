@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+    "name": "Unilogin-loginner",
+    "version": "1.0",
+  
+    "description": "Adds a red border to all webpages matching mozilla.org.",
+  
+    "icons": {
+      "48": "icons/icon-48.png"
+    },
+  
+    "content_scripts": [
+      {
+        "js": ["uni-loginner.js"],
+        "matches": ["*://broker.unilogin.dk/auth/*", "*://idp.unilogin.dk/auth/*"]
+      }
+    ],
+    "browser_action": {
+      "default_icon": "icons/icon-48.png",
+      "default_title": "Unilogin-loginner",
+      "default_popup": "popup/unilogin-menu.html"
+    },
+    "permissions": [
+      "browsingData",
+      "notifications",
+      "storage"
+    ]
+}
