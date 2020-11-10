@@ -17,7 +17,7 @@
     }
 
 
-    //account.pass = atob(account.pass);
+    account.pass = atob(account.pass);
 
     failed = document.getElementById("form-error-message-form-error")
                                     //form-error-message-form-error
